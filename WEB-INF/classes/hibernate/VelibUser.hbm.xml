@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 25, 2016 12:23:24 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="model.VelibUser" table="VELIB_USER" schema="VELIB">
+        <id name="numInd" type="big_decimal">
+            <column name="NUM_IND" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="nom" type="string">
+            <column name="NOM" length="30" not-null="true" />
+        </property>
+        <property name="prenom" type="string">
+            <column name="PRENOM" length="30" not-null="true" />
+        </property>
+        <property name="vuPassword" type="string">
+            <column name="VU_PASSWORD" length="30" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL" length="30" />
+        </property>
+        <property name="longitude" type="big_decimal">
+            <column name="LONGITUDE" precision="8" scale="6" />
+        </property>
+        <property name="lattitude" type="big_decimal">
+            <column name="LATTITUDE" precision="8" scale="6" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

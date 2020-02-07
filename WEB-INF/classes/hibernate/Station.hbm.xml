@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 25, 2016 12:23:24 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="model.Station" table="STATION" schema="VELIB">
+        <id name="stationId" type="big_decimal">
+            <column name="STATION_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="stName" type="string">
+            <column name="ST_NAME" length="60" not-null="true" />
+        </property>
+        <property name="address" type="string">
+            <column name="ADDRESS" length="160" not-null="true" />
+        </property>
+        <property name="fullAddress" type="string">
+            <column name="FULL_ADDRESS" length="160" not-null="true" />
+        </property>
+        <property name="longitude" type="big_decimal">
+            <column name="LONGITUDE" precision="8" scale="6" not-null="true" />
+        </property>
+        <property name="lattitude" type="big_decimal">
+            <column name="LATTITUDE" precision="8" scale="6" not-null="true" />
+        </property>
+        <property name="stOpen" type="big_decimal">
+            <column name="ST_OPEN" precision="22" scale="0" />
+        </property>
+        <property name="stBonus" type="big_decimal">
+            <column name="ST_BONUS" precision="22" scale="0" />
+        </property>
+        <property name="updateDate" type="date">
+            <column name="UPDATE_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

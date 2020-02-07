@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 29, 2016 10:51:04 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="model.Favorites" table="FAVORITES" schema="VELIB">
+        <id name="favId" type="big_decimal">
+            <column name="FAV_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="velibUser" class="model.VelibUser" fetch="select">
+            <column name="NUM_CLIENT" precision="22" scale="0" />
+        </many-to-one>
+        <many-to-one name="station" class="model.Station" fetch="select">
+            <column name="NUM_STATION" precision="22" scale="0" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
